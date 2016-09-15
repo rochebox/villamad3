@@ -1,2 +1,75 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'https://fonts.googleapis.com/css?family=Dosis|Poiret+One|Pompiere|Raleway';
+
+body {
+   background: url('frenchstucco.png');
+  /* Helvetica/Arial-based sans serif stack */
+/* font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif; */
+
+font-family: 'Raleway', sans-serif;
+ /* font-family: 'Poiret One', cursive; */
+/* font-family: 'Dosis', sans-serif;  */
+/* font-family: 'Pompiere', cursive;  */
+}
+
+.hero {
+  background: url('/assets/hero1.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 390px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin:0;
+  /* color: white; */
+  color: #fff9ff;
+}
+
+h3 {
+  color: black;
+}
+
+.frosty {
+  background:rgba(0,0,0, 0.4);
+  height: 250px;
+}
+
+.frosty h1 {
+  font-family: 'black_jackregular', sans-serif;
+  /* text-shadow: 1px 1px #2BBBFF; */
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+  font-size: 44pt;
+  margin-top: 40px;
+}
+
+.navbar {
+  border-radius:0;
+  /* font-family: "Helvetica Neue", Helvetica; */
+  font-weight: 200;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  background:url('lodyas.png');
+}
+
+.navbar-inverse a.navbar-brand {
+  font-family: 'black_jackregular', sans-serif;
+  /* font-weight: 100; */
+  /* color:white; */
+  /* color: #2BBBFF; */
+  /* color: #66d9ff; */
+  /* color: #ffccdd; */
+  color: #ffe6ff;
+}
+
+a.navbar-brand {
+	font-size: 18pt;
+	/* text-shadow: 1px 1px #2BBBFF; */
+	
+}
+
+.btn {
+  border-radius:0;
+}
