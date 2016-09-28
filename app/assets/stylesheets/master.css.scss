@@ -23,11 +23,29 @@ font-family: 'Raleway', sans-serif;
   box-shadow: 0px 3px 8px #2a2a2a;
 }
 
+
+.hero_homeowner {
+  background: url('/assets/homeowner_pic.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 390px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.navigation_homeowner{
+ /*  background-color: #ccccb3; */
+
+}
 h1, h2, h3, h4, h5, h6, .navbar {
   margin:0;
   /* color: white; */
-  color: #fff9ff;
+  
+  color: black;
 }
+
+
 
 h3 {
   color: black;
@@ -44,6 +62,7 @@ h3 {
   text-shadow: rgba(0,0,0,0.95) 1px 1px;
   font-size: 44pt;
   margin-top: 40px;
+  color: #fff9ff; 
 }
 
 .navbar {
@@ -73,3 +92,22 @@ a.navbar-brand {
 .btn {
   border-radius:0;
 }
+
+.homeowner-homepage h1{
+  font-family: 'black_jackregular', sans-serif;
+  text-align:center;
+  font-size: 44pt;
+}
+
+.homeowner-homepage h2{
+  font-family: 'Raleway', sans-serif;
+  text-align:center;
+  font-size: 24pt;
+}
+
+.homeowner-homepage h4{
+  font-family: 'Raleway', sans-serif;
+  text-align:center;
+  font-size: 14pt;
+}
+
