@@ -1,2 +1,19 @@
 <h1>Villa Madeleine Homeowners</h1>
 <h2>Easy Guide to Dining, Bars and Clubs</h2>
+<div><%= link_to "Add a new Restaurant", new_restaurant_path %></div>
+
+<% @restaurants.each do |r| %>
+	<p> <%= r.id %> <%= r.name %> </p>
+
+	<div>
+    <h1><%= r.name %></h1><br />
+    <i><%= r.address %></i><br />
+    <p><%= r.description %></p><br />
+  </div>
+
+  <hr />
+	
+<% end %>
+
+
+
