@@ -1,7 +1,11 @@
 
 <div class="booyah-box col-xs-10 col-xs-offset-1">
-	<h1><%= @place.name %></h1>
-	<i><%= @place.address %></i>
+	<h1><%= @restaurant.name %></h1>
+	<i><%= @restaurant.address %></i>
 	<br/><br/>
-	<p><%= @place.description %></p>
+	<p><%= @restaurant.description %></p>
+
+	<div class="pull-right">
+    <%= link_to 'Edit', edit_restaurant_path(@restaurant), class: 'btn btn-primary' %>
+  </div>
 </div>

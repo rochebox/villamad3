@@ -1,0 +1,12 @@
+
+
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+  <h1>Edit Your Restaurant Entry</h1>
+  <%= simple_form_for @restaurant do |r| %>
+    <%= r.input :name %>
+    <%= r.input :address %>
+    <%= r.input :description %>
+    <br />
+    <%= r.submit 'Update', class: 'btn btn-primary' %>
+  <% end %>
+</div>
