@@ -11,6 +11,10 @@
     <i><%= r.address %></i><br /><br />
     <p><%= r.description %></p><br />
 
+    <% if r.user.present? %>
+      <small><%= r.user.email %></small>
+    <% end %>
+
    
   </div>
 

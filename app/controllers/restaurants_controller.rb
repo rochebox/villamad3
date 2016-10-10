@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+	before_action :authenticate_user!, only: [:new, :create ]
 
 	def index
 		@restaurants = Restaurant.all
@@ -10,7 +11,7 @@ class RestaurantsController < ApplicationController
 
 	def create
 		
-		Restaurant.create(restaurant_params)
+		current_user.restaurants.create(restaurant_params)
 		redirect_to restaurants_path
 	end
 

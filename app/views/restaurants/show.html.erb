@@ -6,7 +6,9 @@
 	<p><%= @restaurant.description %></p>
 
 	<div class="pull-right">
+	
     <%= link_to 'Edit', edit_restaurant_path(@restaurant), class: 'btn btn-primary' %>
+
      <%= link_to 'Destroy', restaurant_path(@restaurant), method: :delete, data: {confirm: 'Are you sure you want to delete this listing?'},class: 'btn btn-danger' %>
   </div>
 </div>
