@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-	before_action :authenticate_user!, only: [:new, :create ]
+	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy ]
 
 	def index
 		@restaurants = Restaurant.all
@@ -11,8 +11,15 @@ class RestaurantsController < ApplicationController
 
 	def create
 		
-		current_user.restaurants.create(restaurant_params)
-		redirect_to restaurants_path
+		@restaurant = current_user.restaurants.create(restaurant_params)
+		
+
+		if @restaurant.valid?
+    		redirect_to restaurants_path
+  		else
+    		render :new, status: :unprocessable_entity
+  		end
+  		
 	end
 
 	def show
@@ -21,16 +28,28 @@ class RestaurantsController < ApplicationController
 
 	def edit
 		@restaurant = Restaurant.find(params[:id])
+
+		if @restaurant.user != current_user
+    		return render text: 'Not Allowed -- I\'m Sorry, you don\'t have permission to edit' , status: :forbidden
+ 		end
 	end
 
 	def update
 		@restaurant = Restaurant.find(params[:id])
+		if @restaurant.user != current_user
+    		return render text: 'Not Allowed -- I\'m sorry, you don\'t have permission to update', status: :forbidden
+  		end
+
 		@restaurant.update_attributes(restaurant_params)
 		redirect_to restaurants_path
 	end
 
 	def destroy
 		@restaurant = Restaurant.find(params[:id])
+		if @restaurant.user != current_user
+    		return render text: 'Not Allowed -- I\'m sorry, you don\'t have permission to delete this restaurant record', status: :forbidden
+  		end
+
 		@restaurant.destroy
 		redirect_to restaurants_path
 	end
