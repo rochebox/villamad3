@@ -13,6 +13,10 @@ font-family: 'Raleway', sans-serif;
 /* font-family: 'Pompiere', cursive;  */
 }
 
+.brand-font{
+  font-family: 'black_jackregular', sans-serif;
+}
+
 .hero {
   background: url('/assets/hero1.jpeg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -129,10 +133,33 @@ a.navbar-brand {
   padding:20px;
 }
 
+.booyah-pad-right{
+  padding-right:10%;
+}
+
+.booyah-dark-grey{
+  color:#595959;
+}
+
 .field_with_errors {
   color: #ff3333;
   background-color: #FFEEEE;
   border-radius: 3px;
   padding:8px;
+}
+
+.home-glyph{
+  color:#9d9d9d;
+}
+.no-pad{
+  padding:0;
+}
+
+.user-in-h2 {
+  padding-bottom: 10px;
+}
+
+.log-in-width{
+  width: 90%;
 }
 
