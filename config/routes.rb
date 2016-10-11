@@ -4,7 +4,9 @@ Villamad3::Application.routes.draw do
 
   get 'hello' => 'static_pages#user_in'
 
-  resources :restaurants
+  resources :restaurants do
+    resources :comments, only: :create
+  end
 
   
   # The priority is based upon order of creation: first created -> highest priority.
