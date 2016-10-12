@@ -1,6 +1,8 @@
 
 <div class="booyah-box col-xs-10 col-xs-offset-1">
-	<h1><%= @restaurant.name %></h1>
+	<h1 class="brand-font"><%= @restaurant.name %></h1>
+	<br />
+<%= image_tag @restaurant.restaurant_image, class: 'img-responsive' %> 
 	<i><%= @restaurant.address %></i>
 	<br/><br/>
 	<p><%= @restaurant.description %></p>

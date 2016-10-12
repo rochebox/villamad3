@@ -1,13 +1,22 @@
-<h1>Villa Madeleine Homeowners</h1>
-<h2>Easy Guide to Dining, Bars and Clubs</h2>
-<div><%= link_to "Add a new Restaurant", new_restaurant_path %></div>
+<div class="text-center col-xs-10 col-xs-offset-1">
+  <br />
+  <br />
+  <h1 class="text-center brand-font">Villa Madeleine Homeowners</h1>
+  <h2 class="text-center">Easy Guide to Dining, Bars and Clubs</h2>
+  <br />
+  <div><%= link_to "Add a new Restaurant", new_restaurant_path %></div>
+</div>
+
 
 <% @restaurants.each do |r| %>
 	
 
 	<div class="booyah-box col-xs-10 col-xs-offset-1">
-	<p> Restaurant ID # <%= r.id %> </p>	
-      <h1><%= link_to r.name, restaurant_path(r) %></h1>
+		<div class="col-xs-2">
+      <%= image_tag r.restaurant_image, class: 'img-responsive' %>
+    </div>
+    <div class="col-xs-10">
+    <h1><%= link_to r.name, restaurant_path(r), :class => 'brand-font' %></h1>
     <i><%= r.address %></i><br /><br />
     <p><%= r.description %></p><br />
 
@@ -24,10 +33,11 @@
           <%= r.comments.last.message %>
           <small><%= r.comments.last.user.email %></small>
         </blockquote>
+        
       </div>
     <% end %>
 
-   
+   </div>
   </div>
 
   <hr />

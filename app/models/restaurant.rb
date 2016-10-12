@@ -3,4 +3,5 @@ class Restaurant < ActiveRecord::Base
 	has_many :comments
 	
 	validates :name, presence: true
+	mount_uploader :restaurant_image, RestaurantImageUploader
 end
